@@ -1,4 +1,5 @@
 # Team Performance Dashboard
+![Dashboard](images/dashboard_1.png)
 
 Pequeña app React (Vite) para visualizar métricas del un Team de desarrolladores y métricas de flujo (Cycle Time, Lead Time, Flow Efficiency).
 
