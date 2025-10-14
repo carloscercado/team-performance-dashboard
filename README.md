@@ -1,6 +1,8 @@
 # Team Performance Dashboard
 ![Dashboard](images/dashboard_1.png)
 
+**URL de ejemplo:** https://team-performance-dashboard.onrender.com
+
 Este proyecto es un panel de métricas técnicas diseñado para ayudar a un líder técnico o a un equipo de desarrollo a analizar y mejorar su flujo de trabajo.
 El objetivo no es únicamente medir el rendimiento, sino identificar oportunidades de mejora y detectar cuellos de botella en el proceso de desarrollo.
 
