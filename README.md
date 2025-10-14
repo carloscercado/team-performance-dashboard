@@ -1,27 +1,47 @@
 # Team Performance Dashboard
 ![Dashboard](images/dashboard_1.png)
 
-Pequeña app React (Vite) para visualizar métricas del un Team de desarrolladores y métricas de flujo (Cycle Time, Lead Time, Flow Efficiency).
+Este proyecto es un panel de métricas técnicas diseñado para ayudar a un líder técnico o a un equipo de desarrollo a analizar y mejorar su flujo de trabajo.
+El objetivo no es únicamente medir el rendimiento, sino identificar oportunidades de mejora y detectar cuellos de botella en el proceso de desarrollo.
+
+A través de este dashboard se capturan tres métricas clave:
+
+Cycle Time: mide cuánto tiempo transcurre desde que una historia comienza su desarrollo hasta que está lista para ser desplegada.
+👉 Permite entender la agilidad del equipo al completar tareas.
+
+Lead Time for Changes: mide el tiempo total desde que inicia el sprint hasta que el cambio llega a producción.
+👉 Ayuda a analizar la efectividad del proceso de entrega (planificación, pruebas, despliegues).
+
+Flow Efficiency (Eficiencia de Flujo): calcula el porcentaje del tiempo total en que las tareas estuvieron en trabajo activo (Cycle Time / Lead Time).
+👉 Permite ver cuánta parte del proceso se dedica a trabajo real frente a tiempo de espera.
+
+Además, el panel registra:
+
+Cantidad de bugs reportados por historia, para identificar problemas de calidad o de revisiones de código.
+
+Promedios por desarrollador y por sprint, para analizar tendencias de rendimiento y eficiencia.
+
+🎯 Objetivo principal
+
+El objetivo del panel es dar visibilidad completa al ciclo de entrega del equipo, ayudando a responder preguntas como:
+
+- ¿Dónde se generan los retrasos (revisiones, QA, despliegues)?
+
+- ¿Qué tan eficiente es nuestro flujo de trabajo?
+
+- ¿Hay historias con demasiado tiempo inactivo o con muchos bugs?
+
+Con esta información, los líderes técnicos pueden tomar decisiones informadas sobre:
+
+- Mejorar procesos de revisión de código.
+
+- Ajustar tamaños de historias.
+
+- Fortalecer las pruebas automáticas o la integración continua.
+
+- Detectar patrones que impactan la calidad o la velocidad de entrega.
 
 
-## Qué muestra la app
-1. **Promedio general** (cards, fondo coloreado según umbrales):
-   - Promedio Cycle Time (días) 
-   - Promedio Lead Time (días) 
-   - Promedio Flow Efficiency (%) 
-2. **Promedios por desarrollador**:
-   - Cycle Time (promedio/días)
-   - Lead Time (promedio/días) 
-   - Flow Efficiency (promedio/días)
-3. **Tabla de detalle**:
-   - Sprint
-   - Historia 
-   - Desarrollador
-   - Cycle Time (días)
-   - Lead Time (días)
-   - Bugs reportados (si > 0 se marca en rojo)
-   - Flow Efficiency (%)
-   - Paginación: 10 resultados por página.
 
 ## Fórmulas y definiciones
 - **Cycle Time**: tiempo activo de la tarea (In Progress -> Ready for Deploy).
@@ -47,6 +67,8 @@ Se recomienda analizar cuellos de botella.
 🟡 5–10 días: despliegue algo lento → se puede optimizar CI/CD o testing.
 
 🔴 ≥10 días: despliegue tardío → revisar flujos de aprobación, QA o infraestructura.
+
+![Dashboard](images/dashboard_2.png)
 
 - **Flow Efficiency**:
 ```
@@ -82,13 +104,13 @@ npm run dev
 
 ## Conectar Google Sheets (opcional)
 - Publica tu hoja: **Archivo -> Publicar en la web** -> seleccionar hoja -> formato CSV.
-- Copia el enlace (`.../pub?output=csv`) y descomenta el bloque de `fetch` en `DoraMetricsDashboard.jsx`.
+- Copia el enlace (`.../pub?output=csv`) y descomenta el bloque de `fetch` en `TeamPerformanceDashboard.jsx`.
 - Asegúrate que las columnas de la hoja coincidan con:
   - `Sprint`, `Historia`, `Desarrollador`, `Cycle Time (días)`, `Lead Time for Changes (días)`, `Bugs reportados`
 - La app usa `papaparse` para parsear CSV.
 
 
 ## Notas
-- Los colores y umbrales son configurables en los helpers al final del archivo `DoraMetricsDashboard.jsx`.
+- Los colores y umbrales son configurables en los helpers al final del archivo `TeamPerformanceDashboard.jsx`.
 - Si quieres lectura/escritura segura desde Google Sheets, lo ideal es crear una API intermedia con credenciales (Service Account).
 
