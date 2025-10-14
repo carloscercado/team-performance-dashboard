@@ -1,0 +1,25 @@
+# Directorios de dependencias y de build
+/node_modules
+/dist
+/build
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de caché
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+
+# Archivos de IDE
+.idea/
+.vscode/
+
+# Varios
+*.env
+.env.*
