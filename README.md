@@ -7,12 +7,15 @@ El objetivo no es únicamente medir el rendimiento, sino identificar oportunidad
 A través de este dashboard se capturan tres métricas clave:
 
 **Cycle Time:** mide cuánto tiempo transcurre desde que una historia comienza su desarrollo hasta que está lista para ser desplegada.
+
 `Permite entender la agilidad del equipo al completar tareas.`
 
 **Lead Time for Changes:** mide el tiempo total desde que inicia el sprint hasta que el cambio llega a producción.
+
 `Ayuda a analizar la efectividad del proceso de entrega (planificación, pruebas, despliegues).`
 
-Flow Efficiency (Eficiencia de Flujo): calcula el porcentaje del tiempo total en que las tareas estuvieron en trabajo activo (Cycle Time / Lead Time).
+**Flow Efficiency (Eficiencia de Flujo):** calcula el porcentaje del tiempo total en que las tareas estuvieron en trabajo activo (Cycle Time / Lead Time).
+
 `Permite ver cuánta parte del proceso se dedica a trabajo real frente a tiempo de espera.`
 
 
@@ -39,23 +42,28 @@ Con esta información, los líderes técnicos pueden tomar decisiones informadas
 
 ## Fórmulas y definiciones
 - **Cycle Time**: tiempo activo de la tarea (In Progress -> Ready for Deploy).
+
 🟢 Verde (≤ 5 días)
 
 Significa que el equipo entrega historias rápidamente.
+
 `Buen flujo de trabajo, tareas bien planificadas y sin bloqueos.`
 
 🟡 Amarillo (>5 y <10 días)
 
 Entrega moderada, pero podría mejorarse.
+
 `Puede haber pequeñas esperas o tareas algo grandes.`
 
 🔴 Rojo (≥10 días)
 
 Entrega lenta.
+
 `Probablemente hay problemas de dependencias, revisiones lentas o historias muy grandes.
 Se recomienda analizar cuellos de botella.`
 
 - **Lead Time for Changes (LTC)**: tiempo total desde que la tarea es solicitada hasta deploy.
+
 🟢 ≤5 días: despliegue rápido → proceso ágil.
 
 🟡 5–10 días: despliegue algo lento → se puede optimizar CI/CD o testing.
@@ -73,16 +81,19 @@ Se calcula por historia y por desarrollador (promedio).
 🔵 Azul (>60%)
 
 Muy buena eficiencia: la mayor parte del tiempo la historia estuvo en trabajo activo, no esperando.
+
 `El equipo tiene buen flujo y pocas esperas.`
 
 🟡 Amarillo (50–60%)
 
 Eficiencia aceptable, pero podría mejorarse.
+
 `Hay cierto tiempo de espera (QA, revisiones, bloqueos).`
 
 🔴 Rojo (<50%)
 
 Mala eficiencia: más de la mitad del tiempo la historia estuvo detenida.
+
 `Se debe investigar en qué fases se generan esperas.`
 
 ## Cómo ejecutar (local)
