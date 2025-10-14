@@ -1,6 +1,5 @@
 # Directorios de dependencias y de build
 /node_modules
-/dist
 /build
 .env.local
 .env.development.local
