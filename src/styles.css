@@ -4,7 +4,7 @@ body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", 
 .app { max-width:1100px; margin:24px auto; }
 table { border-collapse: collapse; width:100%; }
 th, td { text-align:left; }
-.bg-white { background:white; }
+.bg-white { background:white; margin-top: 2%; }
 .rounded-2xl { border-radius:12px; }
 .shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
 .p-2 { padding:8px; }
